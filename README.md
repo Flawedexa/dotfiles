@@ -15,6 +15,9 @@ Personal configs for Hyprland, fish, kitty, and more.
 | `btop/` | System monitor |
 | `fastfetch/` | System info |
 | `cava/` | Audio visualizer |
+| `gtk/` | GTK3/GTK4 theme CSS |
+| `matugen/` | Material You theme generation |
+| `qtengine/` | Qt theme config & colors |
 | `.bashrc` / `.bash_profile` | Bash fallback config |
 | `.gitconfig` | Git config |
 

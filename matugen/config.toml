@@ -1,0 +1,8 @@
+[config]
+version_check = false
+
+# Flawed-Shell begin
+[templates.Flawed-Shell]
+input_path  = '~/.config/matugen/templates/Flawed-Shell/Theme.qml'
+output_path = "/home/flawed/.config/Flawed-Shell/config/MatugenTheme.qml"
+# Flawed-Shell end
