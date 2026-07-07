@@ -1,5 +1,5 @@
 function fish_greeting
-    echo -ne '\x1b[38;5;16m'  # Set colour to primary
+    echo -ne '\x1b[38;5;15m'  # Set colour to white
     echo '   ______                   __'
     echo '  / __/ /__ __    _____ ___/ /'
     echo ' / _// / _ `/ |/|/ / -_) _  / '
