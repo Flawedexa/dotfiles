@@ -5,5 +5,5 @@ set -l win (hyprctl clients -j | jq '.[] | select(.class == "discord")')
 if test -z "$win"
     discord &
 else
-    hyprctl dispatch togglespecialworkspace communication
+    hyprctl dispatch "hl.dsp.workspace.toggle_special('communication')"
 end

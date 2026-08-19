@@ -5,5 +5,5 @@ set -l win (hyprctl clients -j | jq '.[] | select(.class == "Spotify" or .initia
 if test -z "$win"
     spotify-launcher &
 else
-    hyprctl dispatch togglespecialworkspace music
+    hyprctl dispatch "hl.dsp.workspace.toggle_special('music')"
 end
