@@ -32,9 +32,10 @@ chmod 644 "$dest"
 sed -i 's|^Background=.*|Background="Backgrounds/current.'"$ext"'"|' "$CONF"
 
 if command -v matugen >/dev/null 2>&1; then
+    mjson="$(mktemp /tmp/sddm-matu.XXXXXX.json)"
     matugen -c "$MATUGEN_CONF" image "$selected" \
-        --json hex --prefer darkness >/tmp/sddm-matu.json 2>/dev/null || true
-    python3 - "$CONF" /tmp/sddm-matu.json <<'PY'
+        --json hex --prefer darkness >"$mjson" 2>/dev/null || true
+    python3 - "$CONF" "$mjson" <<'PY'
 import json, re, sys
 
 conf_path, json_path = sys.argv[1], sys.argv[2]
@@ -92,6 +93,7 @@ for i, line in enumerate(lines):
 with open(conf_path, "w") as f:
     f.writelines(lines)
 PY
+    rm -f "$mjson"
     echo "sddm-wallpaper: colors applied from matugen"
 fi
 
