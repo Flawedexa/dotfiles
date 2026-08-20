@@ -1,0 +1,10 @@
+[Unit]
+Description=Pick random wallpaper for SDDM greeter
+Before=sddm.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/flawed/dotfiles/hypr/scripts/sddm-wallpaper.sh
+
+[Install]
+WantedBy=multi-user.target
