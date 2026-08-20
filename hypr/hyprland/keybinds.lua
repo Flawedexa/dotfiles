@@ -17,8 +17,8 @@ hl.bind("SUPER + space", hl.dsp.exec_cmd("wofi --show drun"))
 
 -- Session
 hl.bind(kbSession, hl.dsp.exec_cmd("loginctl lock-session"))
-hl.bind(kbLock, hl.dsp.exec_cmd("hyprlock"))
-hl.bind(kbRestoreLock, hl.dsp.exec_cmd("hyprlock"), { locked = true })
+hl.bind(kbLock, hl.dsp.exec_cmd("/home/flawed/dotfiles/hypr/scripts/hyprlock.sh"))
+hl.bind(kbRestoreLock, hl.dsp.exec_cmd("/home/flawed/dotfiles/hypr/scripts/hyprlock.sh"), { locked = true })
 
 -- Brightness
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +10%"), { locked = true })
